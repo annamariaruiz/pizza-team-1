@@ -12,41 +12,11 @@
     var olives = c.getContext("2d");
     var pineapple = c.getContext("2d");
 
-    function makeSmall() {
+    function changePizzaSize(pizzaSize) {
         base.clearRect(0, 0, myCanvas.width, myCanvas.height);    
         base.fillStyle = '#C59E6B';
         base.beginPath();
-        base.arc(225, 225, 125, 0, 2 * Math.PI);
-        base.stroke();
-        base.fill();
-        base.endPath();
-    }
-
-    function makeMedium() {
-        base.clearRect(0, 0, myCanvas.width, myCanvas.height);    
-        base.fillStyle = '#C59E6B';
-        base.beginPath();
-        base.arc(225, 225, 150, 0, 2 * Math.PI);
-        base.stroke();
-        base.fill();
-        base.endPath();
-    }
-
-    function makeLarge() {
-        base.clearRect(0, 0, myCanvas.width, myCanvas.height);    
-        base.fillStyle = '#C59E6B';
-        base.beginPath();
-        base.arc(225, 225, 175, 0, 2 * Math.PI);
-        base.stroke();
-        base.fill();
-        base.endPath();
-    }
-
-    function makeXLarge() {
-        base.clearRect(0, 0, myCanvas.width, myCanvas.height);    
-        base.fillStyle = '#C59E6B';
-        base.beginPath();
-        base.arc(225, 225, 200, 0, 2 * Math.PI);
+        base.arc(225, 225, pizzaSize, 0, 2 * Math.PI);
         base.stroke();
         base.fill();
         base.endPath();
