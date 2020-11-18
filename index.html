@@ -10,90 +10,94 @@
 </head>
 
 <body>
-  <div id='pizza'>
-    <canvas id="myCanvas" width="500" height="500"></canvas>
-  </div>
-  <div class="btn-group mt-3 ml-5 pl-3" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-secondary" onclick="changePizzaSize(125)">Small</button>
-    <button type="button" class="btn btn-secondary" onclick="changePizzaSize(150)">Medium</button>
-    <button type="button" class="btn btn-secondary" onclick="changePizzaSize(175)">Large</button>
-    <button type="button" class="btn btn-secondary" onclick="changePizzaSize(200)">X-Large</button>
+  <nav> <!--navigation bar-->
+
+  </nav>
+  <div> <!--pre-made pizzas--> 
+
   </div>
   <div class="container">
     <div class="row">
+      <div class="column-lg">
+        <div id='pizza'>
+          <canvas id="myCanvas" width="500" height="500"></canvas>
+        </div>
+        <div class="btn-group mt-3 ml-5 pl-3" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary" onclick="changePizzaSize(125)">Small</button>
+          <button type="button" class="btn btn-secondary" onclick="changePizzaSize(150)">Medium</button>
+          <button type="button" class="btn btn-secondary" onclick="changePizzaSize(175)">Large</button>
+          <button type="button" class="btn btn-secondary" onclick="changePizzaSize(200)">X-Large</button>
+        </div>
+      </div>
       <div class="col-sm">
-        <br>
-        <br>
-        <br>
-        <br>
         <p>Pepperoni</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="pepperoniLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="pepperoniWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="pepperoniRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="pepperoni(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="pepperoni(whole">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="pepperoni(right)">Right</button>
         </div>
-
+  
         <p>Sausage</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="sausageLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="sausageWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="sausageRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="sausage(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="sausage(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="sausage(right)">Right</button>
         </div>
-
+  
         <p>Ham</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="hamLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="hamWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="hamRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="ham(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="ham(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="ham(right)">Right</button>
         </div>
-
+  
         <p>Chicken</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="chickenLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="chickenWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="chickenRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="chicken(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="chicken(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="chicken(right)">Right</button>
         </div>
-
+  
         <p>Beef</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="beefLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="beefWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="beefRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="beef(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="beef(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="beef(right)">Right</button>
         </div>
-
+  
         <p>Pork</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="porkLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="porkWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="porkRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="pork(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="pork(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="pork(right)">Right</button>
         </div>
-
+  
         <p>Mushroom</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="mushroomLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="mushroomWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="mushroomRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="mushroom(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="mushroom(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="mushroom(right)">Right</button>
         </div>
-
+  
         <p>Onion</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="onionLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="onionWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="onionRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="onion(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="onion(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="onion(right)">Right</button>
         </div>
-
+  
         <p>Olive</p>
         <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="oliveLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="oliveWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="oliveRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="olive(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="olive(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="olive(right)">Right</button>
         </div>
-
+  
         <p>Pineapple</p>
         <div class="btn-group mt-3 ml-5 pl-5 mb-5" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary" onclick="pineappleLeft()">Left</button>
-          <button type="button" class="btn btn-secondary" onclick="pineappleWhole()">Whole</button>
-          <button type="button" class="btn btn-secondary" onclick="pineappleRight()">Right</button>
+          <button type="button" class="btn btn-secondary" onclick="pineapple(left)">Left</button>
+          <button type="button" class="btn btn-secondary" onclick="pineapple(whole)">Whole</button>
+          <button type="button" class="btn btn-secondary" onclick="pineapple(right)">Right</button>
         </div>
       </div>
     </div>
