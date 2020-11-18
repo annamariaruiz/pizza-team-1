@@ -21,3 +21,19 @@
         base.fill();
         base.endPath();
     }
+
+    function preMadePepperoni(){
+
+    }
+    function preMadeHawaiian(){
+        
+    }
+    function preMadeSupreme(){
+        
+    }
+    function preMadeGreek(){
+        
+    }
+    function preMadeNewYork(){
+        
+    }
