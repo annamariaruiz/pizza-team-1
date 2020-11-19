@@ -4,3 +4,6 @@ p {
     margin-left: 150px;
     padding-top: 100px;
 }
+
+#pizza { position: relative; }
+.canvas { position: absolute; top: 0; left: 0; }
