@@ -223,27 +223,33 @@ function addChicken(placeChicken) {
         base.fill();
     }
 }
+
+//premade pizza functions
 function preMadePepperoni(){
     changePizzaSize(getPizzaSize);
     addPepperoni(2);
 }
+
 function preMadeHawaiian(){
     changePizzaSize(getPizzaSize);
-    addPineapple(2);
+    // addPineapple(2);
     addHam(2);
 }
+
 function preMadeSupreme(){
     changePizzaSize(getPizzaSize);
     addPepperoni(2);
     addSausage(2);
-    addOlive(2);
-    addOnion(2);
+    // addOlive(2);
+    // addOnion(2);
 }
-function preMadeGreek(){
+
+function preMadeMeatLovers(){
     changePizzaSize(getPizzaSize);
-    addMushroom(2);
+    // addMushroom(2);
 }
-function preMadeNewYork(){
+
+function preMadeVeggie(){
     changePizzaSize(getPizzaSize);
-    
+    //add
 }
