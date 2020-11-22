@@ -12,6 +12,7 @@ var j = document.getElementById("myCanvas8");
 var k = document.getElementById("myCanvas9");
 var l = document.getElementById("myCanvas10");
 var m = document.getElementById("myCanvas11");
+var toppingList = document.getElementById("currentToppings")
 
 
 
@@ -424,6 +425,8 @@ function clearPizza(){
     chicken.clearRect(0,0, myCanvas.width, myCanvas.height);
     pork.clearRect(0,0, myCanvas.width, myCanvas.height);
     olive.clearRect(0,0, myCanvas.width, myCanvas.height);
+    ToppingCount = 0;
+    updatePrice();
 }
 
 function preMadePepperoni(){
@@ -483,8 +486,11 @@ function preMadeVeggie(){
 function updatePrice(){
     let Pricing = ToppingCount;
     PriceDisplay = document.getElementById("priceDisplay");
-    PriceDisplay.innerHTML = "$" + Pricing + ". 00";
-    if(ToppingCount >= 5){
+    PriceDisplay.innerHTML = "$" + (Pricing-1) + ". 00";
+    if(ToppingCount == 1){
+        PriceDisplay.innerHTML = "$0.00";
+    }
+    else if(ToppingCount >= 5){
         var SpecialDealDisplay = document.getElementById("SpecialDeal");
         SpecialDealDisplay.style.display = "block";
         Pricing++;
