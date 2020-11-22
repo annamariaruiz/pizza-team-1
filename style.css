@@ -4,22 +4,19 @@ p {
     margin-left: 150px;
     padding-top: 1px;
 }
-
-.canvas { position: absolute; top: 0; left: 0; }
-
-.body{
-    background-color: blue !important;
-}
-
-
+.canvas { position: absolute; top: 0px; left: 0; bottom: 50px; }
 #premadeArea{
     padding-bottom: 10px;
 }
-
-.sizeArea{
-    color: blue;
+#sizeArea{
+    margin: 5px;
+    padding-bottom: 500px;;
 }
-
 #SpecialDeal{
     display: none;
 }
+canvas { 
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
