@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,10 +19,37 @@
       </nav>
 
       <!-- This is the premade pizza area, the various premade pizzas will go here  -->
-      <div class="container">
-          <div class="row justify-content-center">
-              <h1 class="">Order Pizza Here</h1>
+      <div id="premadeArea" class="container">
+        <div class="row justify-content-center">
+          <h1>Order Pizza Here</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <!--pepperoni pizza-->
+            <!--whole pepperoni-->
+            <button type="button" class="btn btn-secondary" onclick="preMadePepperoni()">Pepperoni</button>
           </div>
+          <div class="col-sm-2">
+            <!--hawaiian pizza-->
+            <!--ham, pineapple-->
+            <button type="button" class="btn btn-secondary" onclick="preMadeHawaiian()">Hawaiian</button>
+          </div>
+          <div class="col-sm-2">
+            <!--supreme pizza-->
+            <!--pepperoni, sausage, onion, olive-->
+            <button type="button" class="btn btn-secondary" onclick="preMadeSupreme()">Supreme</button>
+          </div>
+          <div class="col-sm-2">
+            <!--meat lovers pizza-->
+            <!--pepperoni, sausage, -->
+            <button type="button" class="btn btn-secondary" onclick="preMadeMeatLovers()">Meat Lovers</button>
+          </div>
+          <div class="col-sm-2">
+            <!--veggie-->
+            <!--olives, onion, -->
+            <button type="button" class="btn btn-secondary" onclick="preMadeVeggie()">Veggie</button>
+          </div>
+        </div>
       </div>
 
 
