@@ -23,3 +23,6 @@ p {
 #SpecialDeal{
     display: none;
 }
+
+#pizza { position: relative; }
+.canvas { position: absolute; top: 0; left: 0; }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,45 +18,18 @@
         <a class="navbar-brand" href="#">Team One's Pizzeria</a>
       </nav>
 
-  <!-- This is the premade pizza area, the various premade pizzas will go here  -->
-  <div id="premadeArea" class="container">
-    <div class="row justify-content-center">
-      <h1>Order Pizza Here</h1>
-    </div>
-    <div class="row">
-      <div class="col-sm-2">
-        <!--pepperoni pizza-->
-        <!--whole pepperoni-->
-        <button type="button" class="btn btn-secondary" onclick="preMadePepperoni()">Pepperoni</button>
+      <!-- This is the premade pizza area, the various premade pizzas will go here  -->
+      <div class="container">
+          <div class="row justify-content-center">
+              <h1 class="">Order Pizza Here</h1>
+          </div>
       </div>
-      <div class="col-sm-2">
-        <!--hawaiian pizza-->
-        <!--ham, pineapple-->
-        <button type="button" class="btn btn-secondary" onclick="preMadeHawaiian()">Hawaiian</button>
-      </div>
-      <div class="col-sm-2">
-        <!--supreme pizza-->
-        <!--pepperoni, sausage, onion, olive-->
-        <button type="button" class="btn btn-secondary" onclick="preMadeSupreme()">Supreme</button>
-      </div>
-      <div class="col-sm-2">
-        <!--meat lovers pizza-->
-        <!--pepperoni, sausage, -->
-        <button type="button" class="btn btn-secondary" onclick="preMadeMeatLovers()">Meat Lovers</button>
-      </div>
-      <div class="col-sm-2">
-        <!--veggie-->
-        <!--olives, onion, -->
-        <button type="button" class="btn btn-secondary" onclick="preMadeVeggie()">Veggie</button>
-      </div>
-    </div>
-  </div>
 
 
       <!-- This is the pizza editor area, the pizza div essentially goes here -->
       <div class="container">
         <div class="row">
-          <div class="col-lg-7">
+          <div class="col-lg-7 bg-light">
             <div id="pizza">
               <canvas class="canvas" id="myCanvas" width="500" height="500"></canvas>
               <canvas class="canvas" id="myCanvas2" width="500" height="500"></canvas>
@@ -70,16 +43,14 @@
               <canvas class="canvas" id="myCanvas10" width="500" height="500"></canvas>
               <canvas class="canvas" id="myCanvas11" width="500" height="500"></canvas>
             </div>
-                  <div id="sizeArea" class="btn-group ml-5 pl-3" role="group" aria-label="Basic example">
+                  <div class="btn-group ml-5 pl-3" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-secondary" onclick="changePizzaSize(125)">Small</button>
                     <button type="button" class="btn btn-secondary" onclick="changePizzaSize(150)">Medium</button>
                     <button type="button" class="btn btn-secondary" onclick="changePizzaSize(175)">Large</button>
                     <button type="button" class="btn btn-secondary" onclick="changePizzaSize(200)">X-Large</button>
-
                   </div>
-
           </div>
-            <div class="col-md">
+            <div class="col-lg-5 bg-light">
 
 
                 <div class="row">
@@ -142,28 +113,6 @@
                   <button type="button" class="btn btn-secondary" onclick="addPork(1)">Left</button>
                   <button type="button" class="btn btn-secondary" onclick="addPork(2)">Whole</button>
                   <button type="button" class="btn btn-secondary" onclick="addPork(3)">Right</button>
-                </div>
-            </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-8">
-                <p>Mushroom</p>
-                <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-secondary" onclick="addMushroom(0)">None</button>
-                  <button type="button" class="btn btn-secondary" onclick="addMushroom(1)">Left</button>
-                  <button type="button" class="btn btn-secondary" onclick="addMushroom(2)">Whole</button>
-                  <button type="button" class="btn btn-secondary" onclick="addMushroom(3)">Right</button>
-                </div>
-            </div>
-                <div class="col-sm-4">
-                <p>Onion</p>
-                <div class="btn-group mt-3 ml-5 pl-5" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-secondary" onclick="addOnion(0)">None</button>
-                  <button type="button" class="btn btn-secondary" onclick="addOnion(1)">Left</button>
-                  <button type="button" class="btn btn-secondary" onclick="addOnion(2)">Whole</button>
-                  <button type="button" class="btn btn-secondary" onclick="addOnion(3)">Right</button>
                 </div>
             </div>
             </div>
