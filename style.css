@@ -2,5 +2,24 @@ p {
     max-width: 80px;
     text-align: center;
     margin-left: 150px;
-    padding-top: 10px;
+    padding-top: 1px;
+}
+
+.canvas { position: absolute; top: 0; left: 0; }
+
+.body{
+    background-color: blue !important;
+}
+
+
+#premadeArea{
+    padding-bottom: 10px;
+}
+
+.sizeArea{
+    color: blue;
+}
+
+#SpecialDeal{
+    display: none;
 }
