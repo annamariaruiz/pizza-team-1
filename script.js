@@ -246,10 +246,12 @@ function preMadeSupreme(){
 
 function preMadeMeatLovers(){
     changePizzaSize(getPizzaSize);
-    // addMushroom(2);
+    addPepperoni(2);
+    addSausage(2);
+    addChicken(2);
 }
 
 function preMadeVeggie(){
     changePizzaSize(getPizzaSize);
-    //add
+    // addOlive(2);
 }
