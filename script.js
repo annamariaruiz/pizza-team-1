@@ -14,7 +14,11 @@ var l = document.getElementById("myCanvas10");
 var m = document.getElementById("myCanvas11");
 var toppingList = document.getElementById("currentToppings")
 
-
+const pizza{
+    topping: []
+    
+    
+}
 
 var base = c.getContext("2d");
 var pepperoni = d.getContext("2d");
@@ -490,7 +494,18 @@ function updatePrice(){
     if(ToppingCount == 1){
         PriceDisplay.innerHTML = "$0.00";
     }
-    else if(ToppingCount >= 5){
+    else if(ToppingCount == 0){
+        PriceDisplay.innerHTML = "Price";
+        
+        var SpecialDealDisplay = document.getElementById("SpecialDeal");
+        SpecialDealDisplay.style.display = "none";
+    }
+    else if(ToppingCount == 5){
+        var SpecialDealDisplay = document.getElementById("SpecialDeal");
+        SpecialDealDisplay.style.display = "block";
+        Pricing = 3;
+    }
+    else if(ToppingCount > 5){
         var SpecialDealDisplay = document.getElementById("SpecialDeal");
         SpecialDealDisplay.style.display = "block";
         Pricing++;
@@ -502,5 +517,3 @@ function updatePrice(){
 // ******************************UNIMPLIMENTED*************************************************************
 // Five toppings is $3.00, each after that is still $1.00
 // ******************************UNIMPLIMENTED*************************************************************
-
-
