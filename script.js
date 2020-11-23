@@ -28,6 +28,17 @@ var onion = k.getContext("2d");
 var olive = l.getContext("2d");
 var pineapple = m.getContext("2d");
 
+var isPepperoni = new Boolean(false);
+var isSausage = new Boolean(false);
+var isHam = new Boolean(false);
+var isChicken = new Boolean(false);
+var isBeef = new Boolean(false);
+var isPork = new Boolean(false);
+var isMushroom = new Boolean(false);
+var isOnion = new Boolean(false);
+var isOlive = new Boolean(false);
+var isPineapple = new Boolean(false);
+
 var getPizzaSize = 125;
 
 function changePizzaSize(pizzaSize) {
@@ -48,9 +59,11 @@ pepperoniObj.src = pepperoniImg;
 
 function addPepperoni(placePepperoni) {
     if (placePepperoni == 0){
+        isPepperoni = false;
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placePepperoni == 1) {
+        isPepperoni = true;
         ToppingCount++;
         updatePrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -58,6 +71,7 @@ function addPepperoni(placePepperoni) {
         pepperoni.drawImage(pepperoniObj, 35, 150);
     }
     else if (placePepperoni == 2) {
+        isPepperoni = true;
         ToppingCount++;
         updatePrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -68,12 +82,24 @@ function addPepperoni(placePepperoni) {
         pepperoni.drawImage(pepperoniObj, 170, 90);
     }
     else if (placePepperoni == 3) {
+        isPepperoni = true;
         ToppingCount++;
         updatePrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pepperoni.drawImage(pepperoniObj, 150, 40);
         pepperoni.drawImage(pepperoniObj, 170, 90);
-
+    }
+    else if (placePepperoni == 4) {
+        if (isPepperoni == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placePepperoni == 5) {
+        if (isPepperoni == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -84,9 +110,11 @@ sausageObj.src = sausageImg;
 
 function addSausage(placeSausage) {
     if (placeSausage == 0){
+        isSausage = false;
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeSausage == 1) {
+        isSausage = true;
         ToppingCount++;
         updatePrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -94,6 +122,7 @@ function addSausage(placeSausage) {
         sausage.drawImage(sausageObj, 45, 175);
     }
     else if (placeSausage == 2) {
+        isSausage = true;
         ToppingCount++;
         updatePrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -104,12 +133,24 @@ function addSausage(placeSausage) {
         sausage.drawImage(sausageObj, 150, 70);
     }
     else if (placeSausage == 3) {
+        isSausage = true;
         ToppingCount++;
         updatePrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
         sausage.drawImage(sausageObj, 200, 50);
         sausage.drawImage(sausageObj, 150, 70);
-
+    }
+    else if (placeSausage == 4) {
+        if (isSausage == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeSausage == 5) {
+        if (isSausage == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -120,9 +161,11 @@ hamObj.src = hamImg;
 
 function addHam(placeHam) {
     if (placeHam == 0){
+        isHam = false;
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeHam == 1) {
+        isHam = true;
         ToppingCount++;
         updatePrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -130,6 +173,7 @@ function addHam(placeHam) {
         ham.drawImage(hamObj, 80, 175);
     }
     else if (placeHam == 2) {
+        isHam = true;
         ToppingCount++;
         updatePrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -140,12 +184,25 @@ function addHam(placeHam) {
         ham.drawImage(hamObj, 130, 120);
     }
     else if (placeHam == 3) {
+        isHam = true;
         ToppingCount++;
         updatePrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
         ham.drawImage(hamObj, 180, 150);
         ham.drawImage(hamObj, 130, 120);
 
+    }
+    else if (placeHam == 4) {
+        if (isHam == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeHam == 5) {
+        if (isHam == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -157,10 +214,11 @@ chickenObj.src = ChickenImg;
 
 function addChicken(placechicken) {
     if (placechicken == 0){
-        
+        isChicken = false;
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placechicken == 1) {
+        isChicken = true;
         ToppingCount++;
         updatePrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -168,6 +226,7 @@ function addChicken(placechicken) {
         chicken.drawImage(chickenObj, 60, 200);
     }
     else if (placechicken == 2) {
+        isChicken = true;
         ToppingCount++;
         updatePrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -178,12 +237,25 @@ function addChicken(placechicken) {
         chicken.drawImage(chickenObj, 160, 120);
     }
     else if (placechicken == 3) {
+        isChicken = true;
         ToppingCount++;
         updatePrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
         chicken.drawImage(chickenObj, 150, 180);
         chicken.drawImage(chickenObj, 160, 120);
 
+    }
+    else if (placechicken == 4) {
+        if (isChicken == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placechicken == 5) {
+        if (isChicken == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -195,10 +267,12 @@ beefObj.src = beefImg;
 
 function addBeef(placeBeef) {
     if (placeBeef == 0){
+        isBeef = false;
         ToppingCount++;
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeBeef == 1) {
+        isBeef = true;
         ToppingCount++;
         updatePrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -206,6 +280,7 @@ function addBeef(placeBeef) {
         beef.drawImage(beefObj, 15, 125);
     }
     else if (placeBeef == 2) {
+        isBeef = true;
         ToppingCount++;
         updatePrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -216,12 +291,25 @@ function addBeef(placeBeef) {
         beef.drawImage(beefObj, 210, 105);
     }
     else if (placeBeef == 3) {
+        isBeef = true;
         ToppingCount++;
         updatePrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
         beef.drawImage(beefObj, 200, 180);
         beef.drawImage(beefObj, 210, 105);
 
+    }
+    else if (placeBeef == 4) {
+        if (isBeef == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeBeef == 5) {
+        if (isBeef == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -233,9 +321,11 @@ porkObj.src = porkImg;
 
 function addPork(placePork) {
     if (placePork == 0){
+        isPork = false;
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placePork == 1) {
+        isPork = true;
         ToppingCount++;
         updatePrice();
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -243,6 +333,7 @@ function addPork(placePork) {
         pork.drawImage(porkObj, 10, 75);
     }
     else if (placePork == 2) {
+        isPork = true;
         ToppingCount++;
         updatePrice();
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -253,6 +344,7 @@ function addPork(placePork) {
         pork.drawImage(porkObj, 210, 140);
     }
     else if (placePork == 3) {
+        isPork = true;
         ToppingCount++;
         updatePrice();
 
@@ -260,6 +352,18 @@ function addPork(placePork) {
         pork.drawImage(porkObj, 160, 200);
         pork.drawImage(porkObj, 210, 140);
 
+    }
+    else if (placePork == 4) {
+        if (isPork == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placePork == 5) {
+        if (isPork == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -271,9 +375,11 @@ mushroomObj.src = mushroomImg;
 
 function addMushroom(placeMushroom) {
     if (placeMushroom == 0){
+        isMushroom = false;
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeMushroom == 1) {
+        isMushroom = true;
         ToppingCount++;
         updatePrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -281,6 +387,7 @@ function addMushroom(placeMushroom) {
         mushroom.drawImage(mushroomObj, 8, 100);
     }
     else if (placeMushroom == 2) {
+        isMushroom = true;
         ToppingCount++;
         updatePrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -291,12 +398,25 @@ function addMushroom(placeMushroom) {
         mushroom.drawImage(mushroomObj, 218, 115);
     }
     else if (placeMushroom == 3) {
+        isMushroom = true;
         ToppingCount++;
         updatePrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
         mushroom.drawImage(mushroomObj, 140, 205);
         mushroom.drawImage(mushroomObj, 218, 115);
 
+    }
+    else if (placeMushroom == 4) {
+        if (isMushroom == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeMushroom == 5) {
+        if (isMushroom == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -308,9 +428,11 @@ onionObj.src = onionImg;
 
 function addOnion(placeOnion) {
     if (placeOnion == 0){
+        isOnion = false;
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeOnion == 1) {
+        isOnion = true;
         ToppingCount++;
         updatePrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -318,6 +440,7 @@ function addOnion(placeOnion) {
         onion.drawImage(onionObj, 40, 120);
     }
     else if (placeOnion == 2) {
+        isOnion = true;
         ToppingCount++;
         updatePrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -328,12 +451,25 @@ function addOnion(placeOnion) {
         onion.drawImage(onionObj, 180, 120);
     }
     else if (placeOnion == 3) {
+        isOnion = true;
         ToppingCount++;
         updatePrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
         onion.drawImage(onionObj, 125, 210);
         onion.drawImage(onionObj, 180, 120);
 
+    }
+    else if (placeOnion == 4) {
+        if (isOnion == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeOnion == 5) {
+        if (isOnion == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -345,10 +481,11 @@ oliveObj.src = oliveImg;
 
 function addOlive(placeOlive) {
     if (placeOlive == 0){
-        
+        isOlive = false;        
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placeOlive == 1) {
+        isOlive = true;        
         ToppingCount++;
         updatePrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -356,6 +493,7 @@ function addOlive(placeOlive) {
         olive.drawImage(oliveObj, 55, 125);
     }
     else if (placeOlive == 2) {
+        isOlive = true;        
         ToppingCount++;
         updatePrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -366,12 +504,25 @@ function addOlive(placeOlive) {
         olive.drawImage(oliveObj, 140, 95);
     }
     else if (placeOlive == 3) {
+        isOlive = true;        
         ToppingCount++;
         updatePrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
         olive.drawImage(oliveObj, 110, 205);
         olive.drawImage(oliveObj, 140, 95);
 
+    }
+    else if (placeOlive == 4) {
+        if (isOlive == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placeOlive == 5) {
+        if (isOlive == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
@@ -383,9 +534,11 @@ pineappleObj.src = pineappleImg;
 
 function addPineapple(placePineapple) {
     if (placePineapple == 0){
+        isPineapple = false;        
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
     }
     else if (placePineapple == 1) {
+        isPineapple = true;        
         ToppingCount++;
         updatePrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -393,7 +546,7 @@ function addPineapple(placePineapple) {
         pineapple.drawImage(pineappleObj, 190, 215);
     }
     else if (placePineapple == 2) {
-
+        isPineapple = true;        
         ToppingCount++;
         updatePrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -404,12 +557,24 @@ function addPineapple(placePineapple) {
         pineapple.drawImage(pineappleObj, 230, 270);
     }
     else if (placePineapple == 3) {
+        isPineapple = true;        
         ToppingCount++;
         updatePrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pineapple.drawImage(pineappleObj, 250, 100);
         pineapple.drawImage(pineappleObj, 230, 270);
-
+    }
+    else if (placePineapple == 4) {
+        if (isPineapple == true) {
+            ToppingCount++;
+            updatePrice();
+        }
+    }
+    else if (placePineapple == 5) {
+        if (isPineapple == true) {
+            ToppingCount++;
+            updatePrice();        
+        }
     }
 }
 
