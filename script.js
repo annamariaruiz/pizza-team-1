@@ -40,6 +40,7 @@ var isOlive = new Boolean(false);
 var isPineapple = new Boolean(false);
 
 var getPizzaSize = 125;
+var numToppings = 0;
 
 function changePizzaSize(pizzaSize) {
     getPizzaSize = pizzaSize;
@@ -49,6 +50,7 @@ function changePizzaSize(pizzaSize) {
     base.arc(225, 225, pizzaSize, 0, 2 * Math.PI);
     base.stroke();
     base.fill();
+    getPrice();        
 }
 
 changePizzaSize(getPizzaSize);
@@ -58,22 +60,24 @@ var pepperoniObj = new Image();
 pepperoniObj.src = pepperoniImg;
 
 function addPepperoni(placePepperoni) {
+    if(isPepperoni == false) {
+        isPepperoni = true;
+        numToppings++;
+    }
     if (placePepperoni == 0){
         isPepperoni = false;
+        numToppings--;
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placePepperoni == 1) {
-        isPepperoni = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pepperoni.drawImage(pepperoniObj, 30, 50);
         pepperoni.drawImage(pepperoniObj, 35, 150);
     }
     else if (placePepperoni == 2) {
-        isPepperoni = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pepperoni.drawImage(pepperoniObj, 30, 50);
         pepperoni.drawImage(pepperoniObj, 35, 150);
@@ -82,23 +86,19 @@ function addPepperoni(placePepperoni) {
         pepperoni.drawImage(pepperoniObj, 170, 90);
     }
     else if (placePepperoni == 3) {
-        isPepperoni = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pepperoni.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pepperoni.drawImage(pepperoniObj, 150, 40);
         pepperoni.drawImage(pepperoniObj, 170, 90);
     }
     else if (placePepperoni == 4) {
         if (isPepperoni == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placePepperoni == 5) {
         if (isPepperoni == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();
         }
     }
 }
@@ -109,22 +109,24 @@ sausageObj.src = sausageImg;
 
 
 function addSausage(placeSausage) {
+    if(isSausage == false) {
+        isSausage = true;
+        numToppings++;
+    }
     if (placeSausage == 0){
         isSausage = false;
+        numToppings--;
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeSausage == 1) {
-        isSausage = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
         sausage.drawImage(sausageObj, 60, 75);
         sausage.drawImage(sausageObj, 45, 175);
     }
     else if (placeSausage == 2) {
-        isSausage = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
         sausage.drawImage(sausageObj, 60, 75);
         sausage.drawImage(sausageObj, 45, 175);
@@ -133,23 +135,19 @@ function addSausage(placeSausage) {
         sausage.drawImage(sausageObj, 150, 70);
     }
     else if (placeSausage == 3) {
-        isSausage = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         sausage.clearRect(0, 0, myCanvas.width, myCanvas.height);
         sausage.drawImage(sausageObj, 200, 50);
         sausage.drawImage(sausageObj, 150, 70);
     }
     else if (placeSausage == 4) {
         if (isSausage == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeSausage == 5) {
         if (isSausage == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -160,22 +158,24 @@ hamObj.src = hamImg;
 
 
 function addHam(placeHam) {
+    if(isHam == false) {
+        isHam = true;
+        numToppings++;
+    }
     if (placeHam == 0){
         isHam = false;
+        numToppings--;
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeHam == 1) {
-        isHam = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
         ham.drawImage(hamObj, 50, 100);
         ham.drawImage(hamObj, 80, 175);
     }
     else if (placeHam == 2) {
-        isHam = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
         ham.drawImage(hamObj, 50, 100);
         ham.drawImage(hamObj, 80, 175);
@@ -184,9 +184,7 @@ function addHam(placeHam) {
         ham.drawImage(hamObj, 130, 120);
     }
     else if (placeHam == 3) {
-        isHam = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         ham.clearRect(0, 0, myCanvas.width, myCanvas.height);
         ham.drawImage(hamObj, 180, 150);
         ham.drawImage(hamObj, 130, 120);
@@ -194,14 +192,12 @@ function addHam(placeHam) {
     }
     else if (placeHam == 4) {
         if (isHam == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeHam == 5) {
         if (isHam == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -213,22 +209,24 @@ chickenObj.src = ChickenImg;
 
 
 function addChicken(placechicken) {
+    if(isChicken == false) {
+        isChicken = true;
+        numToppings++;
+    }
     if (placechicken == 0){
         isChicken = false;
+        numToppings--;
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placechicken == 1) {
-        isChicken = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
         chicken.drawImage(chickenObj, 65, 40);
         chicken.drawImage(chickenObj, 60, 200);
     }
     else if (placechicken == 2) {
-        isChicken = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
         chicken.drawImage(chickenObj, 65, 40);
         chicken.drawImage(chickenObj, 60, 200);
@@ -237,9 +235,7 @@ function addChicken(placechicken) {
         chicken.drawImage(chickenObj, 160, 120);
     }
     else if (placechicken == 3) {
-        isChicken = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         chicken.clearRect(0, 0, myCanvas.width, myCanvas.height);
         chicken.drawImage(chickenObj, 150, 180);
         chicken.drawImage(chickenObj, 160, 120);
@@ -247,14 +243,12 @@ function addChicken(placechicken) {
     }
     else if (placechicken == 4) {
         if (isChicken == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placechicken == 5) {
         if (isChicken == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -266,23 +260,24 @@ beefObj.src = beefImg;
 
 
 function addBeef(placeBeef) {
+    if(isBeef == false) {
+        isBeef = true;
+        numToppings++;
+    }
     if (placeBeef == 0){
         isBeef = false;
-        ToppingCount++;
+        numToppings--;
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeBeef == 1) {
-        isBeef = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
         beef.drawImage(beefObj, 55, 28);
         beef.drawImage(beefObj, 15, 125);
     }
     else if (placeBeef == 2) {
-        isBeef = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
         beef.drawImage(beefObj, 55, 28);
         beef.drawImage(beefObj, 15, 125);
@@ -291,9 +286,7 @@ function addBeef(placeBeef) {
         beef.drawImage(beefObj, 210, 105);
     }
     else if (placeBeef == 3) {
-        isBeef = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         beef.clearRect(0, 0, myCanvas.width, myCanvas.height);
         beef.drawImage(beefObj, 200, 180);
         beef.drawImage(beefObj, 210, 105);
@@ -301,14 +294,12 @@ function addBeef(placeBeef) {
     }
     else if (placeBeef == 4) {
         if (isBeef == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeBeef == 5) {
         if (isBeef == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -320,22 +311,24 @@ porkObj.src = porkImg;
 
 
 function addPork(placePork) {
+    if(isPork == false) {
+        isPork = true;
+        numToppings++;
+    }
     if (placePork == 0){
         isPork = false;
+        numToppings--;
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placePork == 1) {
-        isPork = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pork.drawImage(porkObj, 90, 45);
         pork.drawImage(porkObj, 10, 75);
     }
     else if (placePork == 2) {
-        isPork = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pork.drawImage(porkObj, 90, 45);
         pork.drawImage(porkObj, 10, 75);
@@ -344,9 +337,7 @@ function addPork(placePork) {
         pork.drawImage(porkObj, 210, 140);
     }
     else if (placePork == 3) {
-        isPork = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
 
         pork.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pork.drawImage(porkObj, 160, 200);
@@ -355,14 +346,12 @@ function addPork(placePork) {
     }
     else if (placePork == 4) {
         if (isPork == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placePork == 5) {
         if (isPork == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -374,22 +363,24 @@ mushroomObj.src = mushroomImg;
 
 
 function addMushroom(placeMushroom) {
+    if(isMushroom == false) {
+        isMushroom = true;
+        numToppings++;
+    }
     if (placeMushroom == 0){
         isMushroom = false;
+        numToppings--;
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeMushroom == 1) {
-        isMushroom = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
         mushroom.drawImage(mushroomObj, 90, 15);
         mushroom.drawImage(mushroomObj, 8, 100);
     }
     else if (placeMushroom == 2) {
-        isMushroom = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
         mushroom.drawImage(mushroomObj, 90, 15);
         mushroom.drawImage(mushroomObj, 8, 100);
@@ -398,9 +389,7 @@ function addMushroom(placeMushroom) {
         mushroom.drawImage(mushroomObj, 218, 115);
     }
     else if (placeMushroom == 3) {
-        isMushroom = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         mushroom.clearRect(0, 0, myCanvas.width, myCanvas.height);
         mushroom.drawImage(mushroomObj, 140, 205);
         mushroom.drawImage(mushroomObj, 218, 115);
@@ -408,14 +397,12 @@ function addMushroom(placeMushroom) {
     }
     else if (placeMushroom == 4) {
         if (isMushroom == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeMushroom == 5) {
         if (isMushroom == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -427,22 +414,24 @@ onionObj.src = onionImg;
 
 
 function addOnion(placeOnion) {
+    if(isOnion == false) {
+        isOnion = true;
+        numToppings++;
+    }
     if (placeOnion == 0){
         isOnion = false;
+        numToppings--;
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeOnion == 1) {
-        isOnion = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
         onion.drawImage(onionObj, 90, 25);
         onion.drawImage(onionObj, 40, 120);
     }
     else if (placeOnion == 2) {
-        isOnion = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
         onion.drawImage(onionObj, 90, 25);
         onion.drawImage(onionObj, 40, 120);
@@ -451,9 +440,7 @@ function addOnion(placeOnion) {
         onion.drawImage(onionObj, 180, 120);
     }
     else if (placeOnion == 3) {
-        isOnion = true;
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         onion.clearRect(0, 0, myCanvas.width, myCanvas.height);
         onion.drawImage(onionObj, 125, 210);
         onion.drawImage(onionObj, 180, 120);
@@ -461,14 +448,12 @@ function addOnion(placeOnion) {
     }
     else if (placeOnion == 4) {
         if (isOnion == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeOnion == 5) {
         if (isOnion == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -480,22 +465,24 @@ oliveObj.src = oliveImg;
 
 
 function addOlive(placeOlive) {
+    if(isOlive == false) {
+        isOlive = true;
+        numToppings++;
+    }
     if (placeOlive == 0){
-        isOlive = false;        
+        isOlive = false;   
+        numToppings--;     
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placeOlive == 1) {
-        isOlive = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
         olive.drawImage(oliveObj, 90, 75);
         olive.drawImage(oliveObj, 55, 125);
     }
     else if (placeOlive == 2) {
-        isOlive = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
         olive.drawImage(oliveObj, 90, 75);
         olive.drawImage(oliveObj, 55, 125);
@@ -504,9 +491,7 @@ function addOlive(placeOlive) {
         olive.drawImage(oliveObj, 140, 95);
     }
     else if (placeOlive == 3) {
-        isOlive = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         olive.clearRect(0, 0, myCanvas.width, myCanvas.height);
         olive.drawImage(oliveObj, 110, 205);
         olive.drawImage(oliveObj, 140, 95);
@@ -514,14 +499,12 @@ function addOlive(placeOlive) {
     }
     else if (placeOlive == 4) {
         if (isOlive == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placeOlive == 5) {
         if (isOlive == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -533,22 +516,24 @@ pineappleObj.src = pineappleImg;
 
 
 function addPineapple(placePineapple) {
+    if(isPineapple == false) {
+        isPineapple = true;
+        numToppings++;
+    }
     if (placePineapple == 0){
-        isPineapple = false;        
+        isPineapple = false;   
+        numToppings--;     
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        getPrice();
     }
     else if (placePineapple == 1) {
-        isPineapple = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pineapple.drawImage(pineappleObj, 210, 135);
         pineapple.drawImage(pineappleObj, 190, 215);
     }
     else if (placePineapple == 2) {
-        isPineapple = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pineapple.drawImage(pineappleObj, 210, 135);
         pineapple.drawImage(pineappleObj, 190, 215);
@@ -557,23 +542,19 @@ function addPineapple(placePineapple) {
         pineapple.drawImage(pineappleObj, 230, 270);
     }
     else if (placePineapple == 3) {
-        isPineapple = true;        
-        ToppingCount++;
-        updatePrice();
+        getPrice();
         pineapple.clearRect(0, 0, myCanvas.width, myCanvas.height);
         pineapple.drawImage(pineappleObj, 250, 100);
         pineapple.drawImage(pineappleObj, 230, 270);
     }
     else if (placePineapple == 4) {
         if (isPineapple == true) {
-            ToppingCount++;
-            updatePrice();
+            getPrice();
         }
     }
     else if (placePineapple == 5) {
         if (isPineapple == true) {
-            ToppingCount++;
-            updatePrice();        
+            getPrice();        
         }
     }
 }
@@ -581,17 +562,27 @@ function addPineapple(placePineapple) {
 function clearPizza(){
 
     pineapple.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isPineapple = false;
     pepperoni.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isPepperoni = false;
     ham.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isHam = false;
     sausage.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isSausage = false;
     onion.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isOnion = false;
     mushroom.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isMushroom = false;
     beef.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isBeef = false;
     chicken.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isChicken = false;
     pork.clearRect(0,0, myCanvas.width, myCanvas.height);
+    isPork = false;
     olive.clearRect(0,0, myCanvas.width, myCanvas.height);
-    ToppingCount = 0;
-    updatePrice();
+    isOlive = false;
+    numToppings = 0;
+    getPrice();
 }
 
 function preMadePepperoni(){
@@ -635,37 +626,32 @@ function preMadeVeggie(){
     addOnion(2);
 }
 
-
-
-
-//Pricing area
-
-
-// Can select 'Double' or 'Extra' toppings that will each count as two toppings
-// First topping is free, each after that is $1.00
-
-
-
-
-//Constantly updates price display
-function updatePrice(){
-    let Pricing = ToppingCount;
-    PriceDisplay = document.getElementById("priceDisplay");
-    PriceDisplay.innerHTML = "$" + (Pricing-1) + ". 00";
-    if(ToppingCount == 1){
-        PriceDisplay.innerHTML = "$0.00";
+function getPrice() {
+    var baseCost = 6;
+    if(getPizzaSize == 125) {
+        var baseCost = 7;
     }
-    else if(ToppingCount >= 5){
-        var SpecialDealDisplay = document.getElementById("SpecialDeal");
-        SpecialDealDisplay.style.display = "block";
-        Pricing++;
+    else if(getPizzaSize == 150) {
+        var baseCost = 8;
+    }
+    else if(getPizzaSize == 175) {
+        var baseCost = 9;
+    }
+    else if(getPizzaSize == 200) {
+        var baseCost = 10;
+    }
+
+    PriceDisplay = document.getElementById("priceDisplay");
+    if(numToppings == 0 || numToppings == 1) {
+        PriceDisplay.innerHTML = "$" + (baseCost) + ".00";
+    }
+    else if(numToppings == 2 || numToppings == 3 || numToppings == 4) {
+        PriceDisplay.innerHTML = "$" + (baseCost + numToppings-1) + ".00";
+    }
+    else if(numToppings == 5) {
+        PriceDisplay.innerHTML = "$" + (baseCost + 3) + ".00";
+    }
+    else if(numToppings > 5) {
+        PriceDisplay.innerHTML = "$" + (baseCost + numToppings-2) + ".00";
     }
 }
-
-// ******************************UNIMPLIMENTED*************************************************************
-// ******************************UNIMPLIMENTED*************************************************************
-// ******************************UNIMPLIMENTED*************************************************************
-// Five toppings is $3.00, each after that is still $1.00
-// ******************************UNIMPLIMENTED*************************************************************
-
-
